@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostTokenView" customModule="Yippi" customModuleProvider="target">
+            <connections>
+                <outlet property="container" destination="iN0-l3-epB" id="cKa-Iy-SFc"/>
+                <outlet property="gradientView" destination="SPS-as-lH4" id="kw2-F7-L4C"/>
+                <outlet property="iconImageView" destination="Gos-Dn-cYn" id="KBd-Qr-x44"/>
+                <outlet property="primaryLabel" destination="WSz-mD-9jN" id="bQF-bE-jky"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="127" height="26"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPS-as-lH4" customClass="TSGradientView" customModule="Yippi" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="127" height="26"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Gos-Dn-cYn">
+                            <rect key="frame" x="26" y="0.0" width="75" height="26"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dA9-u5-8Ly">
+                                    <rect key="frame" x="0.0" y="0.0" width="12" height="26"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hotPostEnable" translatesAutoresizingMaskIntoConstraints="NO" id="TIy-Xv-OJf">
+                                            <rect key="frame" x="0.0" y="8" width="12" height="12"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="TIy-Xv-OJf" secondAttribute="height" multiplier="1:1" id="0dg-nr-gxc"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="TIy-Xv-OJf" secondAttribute="bottom" constant="6" id="Cfj-oo-OsP"/>
+                                        <constraint firstItem="TIy-Xv-OJf" firstAttribute="leading" secondItem="dA9-u5-8Ly" secondAttribute="leading" id="EWw-K6-wup"/>
+                                        <constraint firstAttribute="trailing" secondItem="TIy-Xv-OJf" secondAttribute="trailing" id="U2i-oF-LjI"/>
+                                        <constraint firstItem="TIy-Xv-OJf" firstAttribute="top" secondItem="dA9-u5-8Ly" secondAttribute="top" constant="8" id="dzF-BV-Y5Z"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="发布热门 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSz-mD-9jN">
+                                    <rect key="frame" x="15" y="0.0" width="60" height="26"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="Gos-Dn-cYn" secondAttribute="bottom" id="7Ex-nQ-C9Y"/>
+                        <constraint firstItem="Gos-Dn-cYn" firstAttribute="top" secondItem="SPS-as-lH4" secondAttribute="top" id="bYc-aj-ryb"/>
+                        <constraint firstItem="Gos-Dn-cYn" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SPS-as-lH4" secondAttribute="leading" constant="12" id="d42-13-wLC"/>
+                        <constraint firstItem="Gos-Dn-cYn" firstAttribute="centerX" secondItem="SPS-as-lH4" secondAttribute="centerX" id="dka-If-EyE"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gos-Dn-cYn" secondAttribute="trailing" constant="12" id="l3a-4X-zlV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="SPS-as-lH4" secondAttribute="bottom" id="40R-M2-Bcy"/>
+                <constraint firstItem="SPS-as-lH4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AAL-8J-0yi"/>
+                <constraint firstAttribute="trailing" secondItem="SPS-as-lH4" secondAttribute="trailing" id="SJq-kf-Hd9"/>
+                <constraint firstItem="SPS-as-lH4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="nOK-Am-ob0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-194.92753623188406" y="-64.955357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="hotPostEnable" width="11" height="14"/>
+    </resources>
+</document>

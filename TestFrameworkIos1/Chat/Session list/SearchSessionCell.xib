@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchSessionCell" id="L3E-ta-GsS" customClass="SearchSessionCell" customModule="Yippi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L3E-ta-GsS" id="R2w-t9-uL2">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MAp-HG-GF1" customClass="TSLabel" customModule="Yippi" customModuleProvider="target">
+                        <rect key="frame" x="63" y="15" width="50" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="o3x-Nb-Ezm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPv-53-vOX" customClass="TSLabel" customModule="Yippi" customModuleProvider="target">
+                        <rect key="frame" x="63" y="41" width="209" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdy-xe-asF" customClass="TSLabel" customModule="Yippi" customModuleProvider="target">
+                        <rect key="frame" x="269" y="15" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xXU-i3-Quj" customClass="AvatarView" customModule="Yippi" customModuleProvider="target">
+                        <rect key="frame" x="10" y="15" width="38" height="38"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="38" id="H1W-gh-Bi9"/>
+                            <constraint firstAttribute="height" constant="38" id="WdC-D5-yWr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="YPv-53-vOX" firstAttribute="leading" secondItem="xXU-i3-Quj" secondAttribute="trailing" constant="15" id="6Ie-e2-ZWD"/>
+                    <constraint firstItem="xXU-i3-Quj" firstAttribute="leading" secondItem="R2w-t9-uL2" secondAttribute="leading" constant="10" id="Giv-Gp-2Hp"/>
+                    <constraint firstAttribute="trailing" secondItem="YPv-53-vOX" secondAttribute="trailing" constant="48" id="Jx3-8j-bXc"/>
+                    <constraint firstItem="MAp-HG-GF1" firstAttribute="leading" secondItem="xXU-i3-Quj" secondAttribute="trailing" constant="15" id="LJH-oH-xPl"/>
+                    <constraint firstItem="YPv-53-vOX" firstAttribute="top" secondItem="MAp-HG-GF1" secondAttribute="bottom" constant="5" id="MDX-Pa-m45"/>
+                    <constraint firstItem="Zdy-xe-asF" firstAttribute="centerY" secondItem="MAp-HG-GF1" secondAttribute="centerY" id="MXN-Uj-5GB"/>
+                    <constraint firstItem="MAp-HG-GF1" firstAttribute="top" secondItem="xXU-i3-Quj" secondAttribute="top" id="Qan-or-p7A"/>
+                    <constraint firstItem="xXU-i3-Quj" firstAttribute="top" secondItem="R2w-t9-uL2" secondAttribute="top" constant="15" id="RxW-GN-pGj"/>
+                    <constraint firstAttribute="trailing" secondItem="Zdy-xe-asF" secondAttribute="trailing" constant="9" id="Wz6-3l-doq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="YPv-53-vOX" id="LJP-Jz-Pr8"/>
+                <outlet property="headerButton" destination="xXU-i3-Quj" id="pGx-ty-2OU"/>
+                <outlet property="nameLabel" destination="MAp-HG-GF1" id="pgn-fp-2Ow"/>
+                <outlet property="namewith" destination="o3x-Nb-Ezm" id="ID2-VK-RRk"/>
+                <outlet property="timeLabel" destination="Zdy-xe-asF" id="Wfs-pH-by4"/>
+            </connections>
+            <point key="canvasLocation" x="-1132" y="7.5"/>
+        </tableViewCell>
+    </objects>
+</document>

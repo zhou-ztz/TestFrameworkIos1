@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SharedToastView" customModule="RewardsLink" customModuleProvider="target">
+            <connections>
+                <outlet property="infoButton" destination="woJ-Le-eNg" id="Vz4-cD-MeL"/>
+                <outlet property="infoView" destination="e5j-lh-wy7" id="kqm-4M-5bj"/>
+                <outlet property="toastLabel" destination="Tj3-qt-BsK" id="Akh-Ws-Ioy"/>
+                <outlet property="view" destination="iN0-l3-epB" id="mMc-0M-cal"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vka-Ms-jgM">
+                    <rect key="frame" x="10" y="5" width="373" height="40"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5j-lh-wy7">
+                            <rect key="frame" x="0.0" y="0.0" width="20" height="40"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icInfoRed" translatesAutoresizingMaskIntoConstraints="NO" id="woJ-Le-eNg">
+                                    <rect key="frame" x="2" y="11" width="16" height="18"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="18" id="iwq-NZ-SaM"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="woJ-Le-eNg" firstAttribute="centerY" secondItem="e5j-lh-wy7" secondAttribute="centerY" id="4UV-D1-j7D"/>
+                                <constraint firstAttribute="width" constant="20" id="Ca9-7L-Alx"/>
+                                <constraint firstItem="woJ-Le-eNg" firstAttribute="centerX" secondItem="e5j-lh-wy7" secondAttribute="centerX" id="wa3-Og-cWk"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bva-dY-unv">
+                            <rect key="frame" x="30" y="0.0" width="343" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The input amount does not meet the minimum requirement to use Reward Points." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tj3-qt-BsK">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" red="0.92941176470588238" green="0.12941176470588234" blue="0.12941176470588234" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Tj3-qt-BsK" secondAttribute="trailing" id="4Qg-om-wb5"/>
+                                <constraint firstAttribute="bottom" secondItem="Tj3-qt-BsK" secondAttribute="bottom" id="cbe-ZF-POg"/>
+                                <constraint firstItem="Tj3-qt-BsK" firstAttribute="top" secondItem="bva-dY-unv" secondAttribute="top" id="lKD-6D-KHb"/>
+                                <constraint firstItem="Tj3-qt-BsK" firstAttribute="leading" secondItem="bva-dY-unv" secondAttribute="leading" id="x9g-av-NzH"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.83529411764705885" blue="0.83137254901960778" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="vka-Ms-jgM" secondAttribute="trailing" constant="10" id="SoS-8C-Qi3"/>
+                <constraint firstItem="vka-Ms-jgM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="aQB-8R-yEG"/>
+                <constraint firstAttribute="bottom" secondItem="vka-Ms-jgM" secondAttribute="bottom" constant="5" id="iz4-ZV-V1h"/>
+                <constraint firstItem="vka-Ms-jgM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="lw2-oL-8vj"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="124" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icInfoRed" width="16" height="16"/>
+    </resources>
+</document>

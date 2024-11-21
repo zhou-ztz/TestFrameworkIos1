@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RedPacketView" customModule="Yippi" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarView" destination="E31-qu-KB7" id="b58-QH-UYc"/>
+                <outlet property="contentView" destination="nRf-b9-w23" id="mfG-EJ-9si"/>
+                <outlet property="descriptionLabel" destination="HgB-k5-4ji" id="VyV-jg-Gcs"/>
+                <outlet property="eggImageView" destination="flL-iY-K7C" id="Lc1-WP-D90"/>
+                <outlet property="nameLabel" destination="N81-4r-o2A" id="0ef-s8-apF"/>
+                <outlet property="openEggView" destination="9cL-gZ-Ge3" id="j8F-LE-o0U"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="nRf-b9-w23">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="open_egg_icon" translatesAutoresizingMaskIntoConstraints="NO" id="flL-iY-K7C">
+                    <rect key="frame" x="36.666666666666657" y="216" width="320" height="420"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="420" id="Rmg-p7-ocP"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9cL-gZ-Ge3">
+                    <rect key="frame" x="141.66666666666666" y="318.66666666666669" width="110" height="110"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="110" id="Em3-BJ-rKs"/>
+                        <constraint firstAttribute="height" constant="110" id="VhI-ks-eTp"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fa5-bm-fNo">
+                    <rect key="frame" x="96.666666666666686" y="436" width="200" height="30"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E31-qu-KB7" customClass="AvatarView" customModule="Yippi" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="oje-Sm-eqU"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2w8-XR-May">
+                            <rect key="frame" x="30" y="0.0" width="5" height="30"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="5" id="Vvu-MT-L4W"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sent by chinghan5" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N81-4r-o2A">
+                            <rect key="frame" x="34.999999999999986" y="0.0" width="165" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="3VD-V5-fP5"/>
+                        <constraint firstAttribute="width" constant="200" id="nUw-WE-ujN"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgB-k5-4ji">
+                    <rect key="frame" x="96.666666666666686" y="476" width="200" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Yp7-rd-Iti"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="HgB-k5-4ji" firstAttribute="centerX" secondItem="flL-iY-K7C" secondAttribute="centerX" id="3uF-h9-Yh6"/>
+                <constraint firstItem="9cL-gZ-Ge3" firstAttribute="centerY" secondItem="Yp7-rd-Iti" secondAttribute="centerY" constant="-65" id="6OI-Dx-k8g"/>
+                <constraint firstItem="HgB-k5-4ji" firstAttribute="top" secondItem="fa5-bm-fNo" secondAttribute="bottom" constant="10" id="7LZ-vN-FYG"/>
+                <constraint firstItem="HgB-k5-4ji" firstAttribute="width" secondItem="fa5-bm-fNo" secondAttribute="width" id="G66-5P-rn0"/>
+                <constraint firstItem="fa5-bm-fNo" firstAttribute="centerX" secondItem="flL-iY-K7C" secondAttribute="centerX" id="JHp-II-kke"/>
+                <constraint firstItem="9cL-gZ-Ge3" firstAttribute="centerX" secondItem="Yp7-rd-Iti" secondAttribute="centerX" id="ORJ-pX-C1b"/>
+                <constraint firstItem="fa5-bm-fNo" firstAttribute="centerY" secondItem="flL-iY-K7C" secondAttribute="centerY" constant="25" id="Qtu-IQ-DRo"/>
+                <constraint firstItem="flL-iY-K7C" firstAttribute="centerY" secondItem="nRf-b9-w23" secondAttribute="centerY" id="WQL-KS-bV3"/>
+                <constraint firstItem="flL-iY-K7C" firstAttribute="centerX" secondItem="nRf-b9-w23" secondAttribute="centerX" id="yLu-EG-kAJ"/>
+            </constraints>
+            <point key="canvasLocation" x="-379.38931297709922" y="-626.05633802816908"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="open_egg_icon" width="320" height="390"/>
+    </resources>
+</document>

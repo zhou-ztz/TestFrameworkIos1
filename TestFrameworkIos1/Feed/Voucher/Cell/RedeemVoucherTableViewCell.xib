@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" indentationWidth="10" rowHeight="212" id="OKy-yM-cu3" customClass="RedeemVoucherTableViewCell" customModule="RewardsLink" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OKy-yM-cu3" id="8I7-ux-IUt">
+                <rect key="frame" x="0.0" y="0.0" width="343" height="190"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9AE-i0-5Zm">
+                        <rect key="frame" x="10" y="5" width="323" height="180"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VOUCHER 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anp-5r-PBg">
+                                <rect key="frame" x="0.0" y="10" width="323" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="fB6-Py-q3H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <color key="textColor" red="0.45098039215686275" green="0.45098039215686275" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="GlR-y1-ImN">
+                                <rect key="frame" x="0.0" y="45" width="323" height="125"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GlR-y1-ImN" secondAttribute="bottom" constant="10" id="5cc-Cr-Hdh"/>
+                            <constraint firstItem="anp-5r-PBg" firstAttribute="leading" secondItem="9AE-i0-5Zm" secondAttribute="leading" id="Clu-YY-EQz"/>
+                            <constraint firstAttribute="trailing" secondItem="anp-5r-PBg" secondAttribute="trailing" id="NGp-7G-EIf"/>
+                            <constraint firstItem="GlR-y1-ImN" firstAttribute="top" secondItem="anp-5r-PBg" secondAttribute="bottom" constant="10" id="eFB-VP-hIm"/>
+                            <constraint firstItem="anp-5r-PBg" firstAttribute="top" secondItem="9AE-i0-5Zm" secondAttribute="top" constant="10" id="kfY-No-LFc"/>
+                            <constraint firstAttribute="trailing" secondItem="GlR-y1-ImN" secondAttribute="trailing" id="mlI-fG-1Au"/>
+                            <constraint firstItem="GlR-y1-ImN" firstAttribute="leading" secondItem="9AE-i0-5Zm" secondAttribute="leading" id="xer-Zr-eTX"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="9AE-i0-5Zm" secondAttribute="bottom" constant="5" id="NQK-Ck-OGD"/>
+                    <constraint firstAttribute="trailing" secondItem="9AE-i0-5Zm" secondAttribute="trailing" constant="10" id="Of8-hS-Ydl"/>
+                    <constraint firstItem="9AE-i0-5Zm" firstAttribute="top" secondItem="8I7-ux-IUt" secondAttribute="top" constant="5" id="jXH-M8-dnl"/>
+                    <constraint firstItem="9AE-i0-5Zm" firstAttribute="leading" secondItem="8I7-ux-IUt" secondAttribute="leading" constant="10" id="lKP-cd-2dX"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                        <real key="value" value="0.0"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentStackView" destination="GlR-y1-ImN" id="gtZ-BV-DYn"/>
+                <outlet property="voucherTitle" destination="anp-5r-PBg" id="FrX-a8-1bI"/>
+            </connections>
+            <point key="canvasLocation" x="176.33587786259542" y="79.577464788732399"/>
+        </tableViewCell>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

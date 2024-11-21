@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="72" id="KGk-i7-Jjw" customClass="MessageCollectCell" customModule="Yippi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="331" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="331" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aJA-U7-OsC">
+                        <rect key="frame" x="15" y="0.0" width="304" height="70"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEF-cT-ocm">
+                                <rect key="frame" x="0.0" y="26.5" width="17" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="17" id="36u-S1-Cv8"/>
+                                    <constraint firstAttribute="height" constant="17" id="q29-Bt-OBX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="ic_checkbox_normal">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZ3-W6-0WX">
+                                <rect key="frame" x="27" y="0.0" width="277" height="70"/>
+                            </view>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0R-93-A0x">
+                        <rect key="frame" x="0.0" y="70" width="331" height="1"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="qwf-AX-3Ko"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="m0R-93-A0x" secondAttribute="trailing" id="NPq-SD-vaF"/>
+                    <constraint firstAttribute="bottom" secondItem="m0R-93-A0x" secondAttribute="bottom" constant="1" id="Rda-wH-16K"/>
+                    <constraint firstItem="aJA-U7-OsC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Rse-YS-Pb5"/>
+                    <constraint firstItem="m0R-93-A0x" firstAttribute="top" secondItem="aJA-U7-OsC" secondAttribute="bottom" id="e5x-9P-cg5"/>
+                    <constraint firstItem="m0R-93-A0x" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pIO-nl-m3i"/>
+                    <constraint firstItem="aJA-U7-OsC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="uAo-Pw-CPS"/>
+                    <constraint firstAttribute="trailing" secondItem="aJA-U7-OsC" secondAttribute="trailing" constant="12" id="zA3-we-428"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="baseView" destination="nZ3-W6-0WX" id="ruq-sJ-9iy"/>
+                <outlet property="checkBoxButton" destination="xEF-cT-ocm" id="tRZ-uV-8R8"/>
+                <outlet property="lineView" destination="m0R-93-A0x" id="FNc-c2-47X"/>
+            </connections>
+            <point key="canvasLocation" x="142.75362318840581" y="72.321428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_checkbox_normal" width="24" height="24"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

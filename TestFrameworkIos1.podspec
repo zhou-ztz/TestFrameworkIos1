@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TestFrameworkIos1"
-  spec.version      = "1.0.3"
+  spec.version      = "1.0.4"
   spec.summary       = "这个是一个测试的demo description of Test-framework"
   spec.description  = <<-DESC
                    这个是一个测试的demo description of TestFrameworkIos1
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.author       = { "tingzhi.zhou" => "tingzhi.zhou@yiartkeji.com" }
   spec.platform     = :ios, "15.0"
-  spec.source       = { :git => 'https://github.com/zhou-ztz/TestFrameworkIos1.git', :tag => '1.0.3'}
+  spec.source       = { :git => 'https://github.com/zhou-ztz/TestFrameworkIos1.git', :tag => '1.0.4'}
   #spec.vendored_frameworks = "TestFrameworkIos1.framework"
   spec.source_files  = "TestFrameworkIos1/**/*.swift"
    #s.source_files = 'Source/**/*.swift'
@@ -93,7 +93,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'InputBarAccessoryView'
 
   spec.dependency 'AlipaySDK-iOS', '~> 15.7.9'
-  spec.dependency 'TTVideoEditor'
+  #spec.dependency 'TTVideoEditor'
 
   spec.dependency 'SGPagingView', '~> 1.6.9'
   spec.dependency 'SGPagingView', '~> 1.6.9'
@@ -106,9 +106,9 @@ Pod::Spec.new do |spec|
 
 
   #spec.vendored_frameworks = ['Frameworks/SobotKit.framework']
-  #spec.xcconfig = {
-  #'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
-  #}
+  spec.xcconfig = {
+  'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
+  }
 
   spec.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 arm64' }
 end

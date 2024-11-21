@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StickerPageCell" rowHeight="238" id="HvU-9S-0Pm" userLabel="stickerPageCell" customClass="StickerPageCell" customModule="Yippi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="223"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HvU-9S-0Pm" id="LUt-3a-oSZ">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="222.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lSZ-qy-H7C" customClass="FSPagerView" customModule="FSPagerView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="222.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ysP-Rs-Vrp" customClass="FSPageControl" customModule="FSPagerView">
+                        <rect key="frame" x="67" y="187.5" width="240" height="25"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="efq-Uv-UT6"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lSZ-qy-H7C" firstAttribute="centerX" secondItem="LUt-3a-oSZ" secondAttribute="centerX" id="0qL-wj-maa"/>
+                    <constraint firstItem="lSZ-qy-H7C" firstAttribute="top" secondItem="LUt-3a-oSZ" secondAttribute="top" id="5m7-TL-9LO"/>
+                    <constraint firstItem="ysP-Rs-Vrp" firstAttribute="centerX" secondItem="LUt-3a-oSZ" secondAttribute="centerX" id="BnB-sa-rdU"/>
+                    <constraint firstAttribute="bottom" secondItem="ysP-Rs-Vrp" secondAttribute="bottom" constant="10" id="K15-47-d5q"/>
+                    <constraint firstItem="lSZ-qy-H7C" firstAttribute="leading" secondItem="LUt-3a-oSZ" secondAttribute="leading" id="Njm-83-fYc"/>
+                    <constraint firstAttribute="bottom" secondItem="lSZ-qy-H7C" secondAttribute="bottom" id="Vc5-S5-PjU"/>
+                    <constraint firstAttribute="trailing" secondItem="lSZ-qy-H7C" secondAttribute="trailing" id="tFq-vk-ddp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="jnl-5O-wfv"/>
+            <connections>
+                <outlet property="pageControl" destination="ysP-Rs-Vrp" id="3Yz-Lg-sqP"/>
+                <outlet property="pager" destination="lSZ-qy-H7C" id="cOK-bb-3en"/>
+            </connections>
+            <point key="canvasLocation" x="52" y="54.422788605697157"/>
+        </tableViewCell>
+    </objects>
+</document>

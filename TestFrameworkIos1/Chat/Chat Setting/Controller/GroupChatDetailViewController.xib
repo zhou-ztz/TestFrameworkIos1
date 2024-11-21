@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GroupChatDetailViewController" customModule="Yippi" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionViewHeight" destination="52g-hh-jyf" id="xMy-jM-DuM"/>
+                <outlet property="contentStackView" destination="gY2-L3-E78" id="vhu-C3-4gc"/>
+                <outlet property="contentView" destination="Gaf-Ff-tit" id="xNL-Ld-jXh"/>
+                <outlet property="memberCollection" destination="wDU-ue-903" id="Wwc-yb-tUv"/>
+                <outlet property="scrollView" destination="aho-3p-7dK" id="6Hk-BJ-EP4"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aho-3p-7dK">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gaf-Ff-tit">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gY2-L3-E78">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
+                                    <subviews>
+                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="wDU-ue-903">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="244"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" priority="999" constant="244" id="52g-hh-jyf"/>
+                                            </constraints>
+                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="m9Y-fU-vzx">
+                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            </collectionViewFlowLayout>
+                                        </collectionView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="gY2-L3-E78" firstAttribute="leading" secondItem="Gaf-Ff-tit" secondAttribute="leading" id="4cv-LC-1hJ"/>
+                                <constraint firstAttribute="trailing" secondItem="gY2-L3-E78" secondAttribute="trailing" id="5TW-ud-9GE"/>
+                                <constraint firstItem="gY2-L3-E78" firstAttribute="top" secondItem="Gaf-Ff-tit" secondAttribute="top" id="BGU-p0-Eev"/>
+                                <constraint firstAttribute="bottom" secondItem="gY2-L3-E78" secondAttribute="bottom" id="uGk-YG-tE8"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Gaf-Ff-tit" firstAttribute="top" secondItem="aho-3p-7dK" secondAttribute="top" id="6gN-g5-moz"/>
+                        <constraint firstItem="Gaf-Ff-tit" firstAttribute="leading" secondItem="aho-3p-7dK" secondAttribute="leading" id="TQ9-hb-MVh"/>
+                        <constraint firstItem="Gaf-Ff-tit" firstAttribute="height" secondItem="aho-3p-7dK" secondAttribute="height" priority="250" id="YZD-6R-wDt"/>
+                        <constraint firstAttribute="bottom" secondItem="Gaf-Ff-tit" secondAttribute="bottom" id="a9z-Cs-MQz"/>
+                        <constraint firstAttribute="trailing" secondItem="Gaf-Ff-tit" secondAttribute="trailing" id="kL2-4G-CvJ"/>
+                        <constraint firstItem="Gaf-Ff-tit" firstAttribute="width" secondItem="aho-3p-7dK" secondAttribute="width" id="yKg-OU-Gb7"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="aho-3p-7dK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0qA-Pk-l7G"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="aho-3p-7dK" secondAttribute="bottom" id="CjX-kK-0wI"/>
+                <constraint firstItem="aho-3p-7dK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="IjP-UY-Sd3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aho-3p-7dK" secondAttribute="trailing" id="Wb5-cS-3nr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="131.8840579710145" y="122.54464285714285"/>
+        </view>
+    </objects>
+</document>

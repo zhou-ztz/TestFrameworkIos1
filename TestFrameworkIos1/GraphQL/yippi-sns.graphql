@@ -1,0 +1,644 @@
+fragment BundleInfo on Sticker {
+    bundle_id,
+    bundle_icon,
+    bundle_name,
+    banner_url,
+    description
+    isGif
+}
+
+fragment ArtistInfo on StickerArtist {
+    artist_id
+    artist_name
+    description
+    icon
+    banner
+    uid
+}
+
+query GameBanners {
+    gameBanners { 
+        banner_id
+        banner_url
+        banner_sequence
+        banner_name
+    }
+}
+
+query FaceUnityByCategory($fu_categories_id: Int, $first: Int!, $after: String) { 
+    faceUnityByCategory(fu_categories_id: $fu_categories_id, first: $first, after: $after) { 
+        pageInfo { 
+            hasNextPage
+            hasPreviousPage
+            startCursor
+            endCursor
+            total
+            count
+            currentPage
+            lastPage
+        }
+        edges { 
+            node { 
+                fu_bundle_id
+                fu_categories_id
+                fu_bundle_icon
+                fu_bundle_name
+                fu_bundle_description
+                fu_bundle_sequence
+                fu_is_free
+                fu_is_show
+                fu_is_official
+                fu_is_delete
+                fu_download_count
+                # fu_bundle_version_major: Int
+                # fu_bundle_version_minor: Int
+                fu_max_face
+                fu_face_description
+                FaceUnityBundleLists(device_type:2) { 
+                    fu_item_path
+                }
+            }
+            cursor
+        }
+    }
+}
+
+query FaceUnity($fu_bundle_id: ID, $fu_categories_id: Int) { 
+    faceUnity(fu_bundle_id: $fu_bundle_id, fu_categories_id: $fu_categories_id) { 
+        fu_bundle_id
+        fu_categories_id
+        fu_bundle_icon
+        fu_bundle_name
+        fu_bundle_description
+        fu_bundle_sequence
+        fu_is_free
+        fu_is_show
+        fu_is_official
+        fu_is_delete
+        fu_download_count
+        # fu_bundle_version_major: Int
+        # fu_bundle_version_minor: Int
+        fu_max_face
+        fu_face_description
+    }
+}
+
+query FaceUnityCategories($first: Int!, $after: String) {
+    FaceUnityCategories(first: $first, after: $after) { 
+        pageInfo { 
+            hasNextPage
+            hasPreviousPage
+            startCursor
+            endCursor
+            total
+            count
+            currentPage
+            lastPage
+        }
+        edges { 
+            node { 
+                fu_categories_id
+                fu_categories_name
+                fu_folder_name
+                fu_is_show
+            }
+            cursor            
+        }
+    }
+}
+
+query FaceUnityBundleLists($first: Int!, $after: String) { 
+    faceUnityBundleLists(first: $first, after: $after) { 
+        pageInfo { 
+            hasNextPage
+            hasPreviousPage
+            startCursor
+            endCursor
+            total
+            count
+            currentPage
+            lastPage
+        }
+        edges { 
+            node { 
+                fu_bundle_id
+                fu_device_type
+            }
+            cursor
+        }
+    }
+}
+
+query FaceUnityBundleList($fu_bundle_id: ID, $fu_device_type: Int) { 
+    faceUnityBundleList(fu_bundle_id: $fu_bundle_id, fu_device_type: $fu_device_type) { 
+        fu_id
+        fu_bundle_id
+        is_show
+        fu_name
+        fu_item_path
+        fu_device_type
+        fu_file_type
+        faceUnity { 
+            fu_bundle_id
+            fu_categories_id
+            fu_bundle_icon
+            fu_bundle_name
+            fu_bundle_description
+            fu_bundle_sequence
+            fu_is_free
+            fu_is_show
+            fu_is_official
+            fu_is_delete
+            fu_download_count
+            # fu_bundle_version_major: Int
+            # fu_bundle_version_minor: Int
+            fu_max_face
+            fu_face_description
+        }
+    }
+}
+
+query Games($ios_status: Int, $first: Int!, $after: String) {
+    games(ios_status: $ios_status, first: $first, after: $after) {
+        pageInfo { 
+            hasNextPage
+            startCursor
+            endCursor
+            count
+        }
+        edges { 
+            node {
+                game_url
+                game_icon
+                game_name
+                game_id
+                description
+                isOfficial
+                game_sequence
+                # GameUrl 
+                # { 
+                #     game_url_id
+                #     url
+                # }
+            }
+            cursor
+        }
+    }
+}
+
+query Users {
+    user {
+        id, username, sex
+    }
+}
+
+query Sticker($bundle_id: ID) {
+    sticker(bundle_id: $bundle_id) {
+        ...BundleInfo
+        artist {
+            ...ArtistInfo
+            user { id username }
+        }
+        artist_id
+        stickerLists {
+            sticker_id
+            sticker_icon
+            sitcker_name
+        }
+        contest {
+            page_icon
+            page_url
+        }
+    }
+}
+
+query StickerArtist($artist_id:ID!, $count: Int!, $page: Int!){
+    StickerArtist(artist_id: $artist_id){
+        artist_id
+        artist_name
+        description
+        icon
+        banner
+        uid
+        hide_view_moment
+        stickers(count:$count , page:$page){
+            paginatorInfo{
+                total
+                currentPage
+                hasMorePages
+                perPage
+            }
+            data{
+                bundle_id
+                bundle_icon
+                bundle_name
+                description
+                banner_url
+                isGif
+                isOfficial
+                status
+                download_count
+                artist_id
+                artist {
+                    artist_name
+                    artist_id
+                    description
+                    icon
+                    banner
+                }
+            }
+        }
+    }
+}
+
+
+query Stickers($filter_type: String, $first: Int!, $after: String) {
+    stickers(filter_type: $filter_type, first: $first, after: $after) {
+        pageInfo {          
+            hasNextPage
+            startCursor
+            endCursor
+            count
+        }
+        edges { 
+            node { 
+                bundle_id
+                bundle_icon
+                bundle_name
+                description
+                banner_url
+                isGif
+                isOfficial
+                status
+                download_count
+                artist_id
+                artist {
+                    artist_name
+                    artist_id
+                    description
+                    icon
+                    banner
+                }
+            }
+            cursor
+        }
+    }
+}
+
+query StickerSearch($bundle_name: String, $first: Int!, $after: String) {
+    stickerSearch(bundle_name: $bundle_name, first: $first, after: $after) {
+        pageInfo {
+            hasNextPage
+            endCursor
+        }
+        edges {
+            node {
+                bundle_id
+                bundle_icon
+                bundle_name
+                description
+                banner_url
+                isGif
+                isOfficial
+                status
+                download_count
+                artist_id
+                artist {
+                    artist_name
+                    artist_id
+                    description
+                    icon
+                    banner
+                }
+            }
+        }
+    }
+}
+
+query ArtistSearch ($artist_name: String, $first: Int!, $after: String){
+  artistSearch(artist_name: $artist_name, first: $first, after: $after) {
+    pageInfo {
+        hasNextPage
+        endCursor
+    }
+    edges {
+      node {
+        artist_id
+        artist_name
+        description
+        icon
+        banner
+        uid
+        hide_view_moment
+        sticker_set
+        user {
+          id
+          username
+          name
+          phone
+          email
+        }
+      }
+    }
+  }
+}
+
+
+
+query StickerLists($first: Int!, $after: String) {
+    stickerLists(first: $first, after: $after) {
+        pageInfo {          
+            hasNextPage
+            startCursor
+            endCursor
+            count
+        }
+        edges { 
+            node { 
+                sticker_id
+                bundle_id
+                sticker_icon
+                sitcker_name
+                sticker { 
+                    description
+                    banner_url
+                    isGif
+                    isOfficial
+                    status
+                    download_count
+                    bundle_id
+                    bundle_icon
+                    artist { 
+                        artist_name
+                        artist_id
+                        description
+                        icon
+                        banner
+                    }
+                    artist_id
+                }
+            }
+            cursor
+        }
+    }
+}
+
+query MyStickers {
+    user {
+        id,
+        username,
+        phone,
+        email,
+        bio,
+        avatar,
+        sex,        
+        stickers(orderBy: [
+                           {
+                           field: "updated_at"
+                           order: DESC
+                           }]){
+            bundle_id,
+            bundle_icon,
+            bundle_name,
+        }
+    }
+}
+
+mutation DownloadSticker($bundleId: ID!) {
+    downloadSticker(bundle_id: $bundleId) {
+        bundle_id,
+        bundle_icon,
+        bundle_name,
+        stickerLists {
+            bundle_id,
+            sticker_icon,
+            sitcker_name
+            sticker_id
+        }
+    }
+}
+
+
+mutation RemoveSticker($bundleId: ID!) {
+    removeSticker(bundle_id: $bundleId) {
+        bundle_id
+    }
+}
+
+
+mutation DownloadFaceUnity($fu_bundle_Id: ID!) {
+    downloadFaceUnity(fu_bundle_id: $fu_bundle_Id) {
+        fu_id
+        fu_bundle_id
+        is_show
+        fu_name
+        fu_item_path
+        fu_device_type
+        fu_file_type
+        faceUnity { 
+            fu_bundle_id
+            fu_categories_id
+            fu_bundle_icon
+            fu_bundle_name
+            fu_bundle_description
+            fu_bundle_sequence
+            fu_is_free
+            fu_is_show
+            fu_is_official
+            fu_is_delete
+            fu_download_count
+            # fu_bundle_version_major: Int
+            # fu_bundle_version_minor: Int
+            fu_max_face
+            fu_face_description
+        }
+    }
+}
+
+mutation RemoveFaceUnity($fu_bundle_Id: ID!) {
+    removeFaceUnity(fu_bundle_id: $fu_bundle_Id) {
+        fu_bundle_id
+        fu_categories_id
+        fu_bundle_icon
+        fu_bundle_name
+        fu_bundle_description
+        fu_bundle_sequence
+        fu_is_free
+        fu_is_show
+        fu_is_official
+        fu_is_delete
+        fu_download_count
+        # fu_bundle_version_major: Int
+        # fu_bundle_version_minor: Int
+        fu_max_face
+        fu_face_description
+    }
+}
+
+
+query FetchRemarks($owner_id: Int!){
+    fetchRemarks(owner_id:$owner_id) {
+        target_id
+        target_username
+        remark_name
+    }
+}
+
+mutation InsertUpdateUserRemark ($target_id: Int!, $target_username: String!, $remark_name:String!){
+    insertUpdateUserRemark(target_id: $target_id, target_username: $target_username, remark_name: $remark_name){
+        owner_id
+        target_id
+        target_username
+        remark_name
+    }
+}
+
+mutation RemoveUserRemark ($target_id: Int!) {
+    removeRemark(target_id: $target_id){
+        owner_id
+        target_id
+        target_username
+        remark_name
+    }
+}
+
+query BytedEffectSound($first: Int!, $after: String) {
+    bytedEffectSound(first: $first, after: $after) {
+        pageInfo {
+            hasNextPage
+            startCursor
+            endCursor
+            count
+        }
+        edges {
+            node {
+                id
+                name
+                file_url
+                cover_url
+            }
+            cursor
+        }
+    }
+}
+
+query BytedEffectCategories($first: Int!, $after: String) {
+    bytedEffectCategories(first: $first, after: $after) {
+        pageInfo {
+            hasNextPage
+            startCursor
+            endCursor
+            count
+        }
+        edges {
+            node {
+                id
+                sequence
+                translation_key
+            }
+            cursor
+        }
+    }
+}
+
+query BytedEffectByCategory($category_id: Int!, $first: Int!, $after: String) {
+  bytedEffectByCategory(category_id: $category_id, first: $first, after: $after) {
+    __typename
+    pageInfo {
+      __typename
+      hasNextPage
+      startCursor
+      endCursor
+      count
+    }
+    edges {
+      __typename
+      node {
+        __typename
+        id
+        name
+        icon_url
+        sequence
+        category_id
+        bundle(device_type: 2){
+            __typename
+            id
+            bundle_id
+            name
+            bundle_url
+        }
+      }
+      cursor
+    }
+  }
+}
+
+query FetchCustomStickers($first: Int!, $after: String) {
+    fetchCustomStickers(first: $first, after: $after) {
+        __typename
+        pageInfo {
+            __typename
+            hasNextPage
+        }
+        edges {
+            __typename
+            
+            node {
+                __typename
+                custom_sticker_id
+                sticker_url
+            }
+            cursor
+        }
+    }
+}
+
+mutation DownloadCustomSticker($custom_sticker_id: ID!) {
+       downloadCustomSticker(custom_sticker_id: $custom_sticker_id) {
+          __typename    custom_sticker_id    sticker_url
+   }
+}
+          
+mutation RemoveCustomSticker($custom_sticker_id: ID!) {
+   removeCustomSticker(custom_sticker_id: $custom_sticker_id) {
+      __typename    custom_sticker_id    sticker_url
+
+   }
+}
+
+mutation UploadCustomSticker($file: Upload!) {
+   uploadCustomSticker(file: $file) {
+    __typename    custom_sticker_id    sticker_url
+   }
+}
+
+mutation RemoveCustomStickers($custom_sticker_ids: [ID!]) {
+   removeCustomStickers(custom_sticker_ids: $custom_sticker_ids) {
+    custom_sticker_id
+  }
+}
+
+mutation RemoveStickers($bundle_ids: [ID!]) {
+   removeStickers(bundle_ids: $bundle_ids) {
+    bundle_id
+  }
+}
+
+mutation SortCustomSticker($custom_stickers: [CustomStickerInput!]) {
+    sortCustomSticker(custom_stickers: $custom_stickers) {
+    custom_sticker_id
+    pivot {
+      sequence
+    }
+  }
+}
+
+mutation SortSticker($stickers: [StickerInput!]) {
+    sortSticker(stickers: $stickers) {
+    bundle_id
+    pivot {
+      sequence
+    }
+  }
+}
+

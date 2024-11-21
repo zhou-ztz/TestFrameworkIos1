@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="stickerCreatorFootView" id="U6b-Vx-4bR" customClass="StickerCreatorFootView" customModule="Yippi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="310" height="51"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KDp-DI-9ec">
+                    <rect key="frame" x="16" y="0.5" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="ZXq-Jo-8Eo"/>
+                        <constraint firstAttribute="height" constant="50" id="o0i-hj-VYA"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C53-0e-AWx">
+                    <rect key="frame" x="74" y="15.5" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qaf-L6-2k9">
+                    <rect key="frame" x="252" y="15.5" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="niR-Qb-yUK">
+                    <rect key="frame" x="0.0" y="0.0" width="310" height="51"/>
+                    <connections>
+                        <action selector="footerDidTapped:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="g1O-gD-krv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="C53-0e-AWx" firstAttribute="leading" secondItem="KDp-DI-9ec" secondAttribute="trailing" constant="8" id="6si-yr-aMs"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="niR-Qb-yUK" secondAttribute="bottom" id="8bs-2q-bHq"/>
+                <constraint firstItem="niR-Qb-yUK" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" id="BZ4-FR-rBU"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="niR-Qb-yUK" secondAttribute="trailing" id="OWv-Z5-tb7"/>
+                <constraint firstItem="Qaf-L6-2k9" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="Oc3-ID-MZx"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="Qaf-L6-2k9" secondAttribute="trailing" constant="16" id="PHE-Ti-NrD"/>
+                <constraint firstItem="KDp-DI-9ec" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="16" id="bBu-4V-dCb"/>
+                <constraint firstItem="C53-0e-AWx" firstAttribute="centerY" secondItem="KDp-DI-9ec" secondAttribute="centerY" id="blu-oR-04r"/>
+                <constraint firstItem="niR-Qb-yUK" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="jcA-uD-puu"/>
+                <constraint firstItem="KDp-DI-9ec" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="zUe-Ae-d1t"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="artistImage" destination="KDp-DI-9ec" id="zsU-cP-3v1"/>
+                <outlet property="artistName" destination="C53-0e-AWx" id="egm-55-WyA"/>
+                <outlet property="indicator" destination="Qaf-L6-2k9" id="viq-C5-C6o"/>
+            </connections>
+            <point key="canvasLocation" x="120" y="148.87556221889056"/>
+        </collectionReusableView>
+    </objects>
+</document>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatNotificationCell" id="9ba-bJ-YDg" customClass="ChatNotificationCell" customModule="Yippi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9ba-bJ-YDg" id="v8n-Uh-SZf">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZX-ce-FnV" customClass="TSLabel" customModule="Yippi" customModuleProvider="target">
+                        <rect key="frame" x="65" y="15" width="196" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QK-Ki-Nih" customClass="TSLabel" customModule="Yippi" customModuleProvider="target">
+                        <rect key="frame" x="65" y="41" width="196" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEa-bt-HIO" customClass="TSLabel" customModule="Yippi" customModuleProvider="target">
+                        <rect key="frame" x="269" y="24.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nby-yY-cey">
+                        <rect key="frame" x="10" y="15" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="DbT-ct-Puf"/>
+                            <constraint firstAttribute="height" constant="40" id="Zpj-8V-v08"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9QK-Ki-Nih" firstAttribute="top" secondItem="nZX-ce-FnV" secondAttribute="bottom" constant="5" id="DqE-4X-kiy"/>
+                    <constraint firstItem="Nby-yY-cey" firstAttribute="top" secondItem="nZX-ce-FnV" secondAttribute="top" id="Suq-7K-ASL"/>
+                    <constraint firstAttribute="trailing" secondItem="FEa-bt-HIO" secondAttribute="trailing" constant="9" id="YlP-XD-Tm1"/>
+                    <constraint firstItem="Nby-yY-cey" firstAttribute="leading" secondItem="v8n-Uh-SZf" secondAttribute="leading" constant="10" id="l05-ul-SCj"/>
+                    <constraint firstItem="nZX-ce-FnV" firstAttribute="trailing" secondItem="9QK-Ki-Nih" secondAttribute="trailing" id="lnv-kI-eV7"/>
+                    <constraint firstItem="9QK-Ki-Nih" firstAttribute="leading" secondItem="Nby-yY-cey" secondAttribute="trailing" constant="15" id="o6e-Dn-ER2"/>
+                    <constraint firstItem="nZX-ce-FnV" firstAttribute="leading" secondItem="Nby-yY-cey" secondAttribute="trailing" constant="15" id="sVf-9q-z7Z"/>
+                    <constraint firstItem="FEa-bt-HIO" firstAttribute="centerY" secondItem="Nby-yY-cey" secondAttribute="centerY" id="shF-nU-44b"/>
+                    <constraint firstItem="Nby-yY-cey" firstAttribute="top" secondItem="v8n-Uh-SZf" secondAttribute="top" constant="15" id="wP8-aj-D52"/>
+                    <constraint firstItem="FEa-bt-HIO" firstAttribute="leading" secondItem="9QK-Ki-Nih" secondAttribute="trailing" constant="8" id="wlx-eF-Rfa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="9QK-Ki-Nih" id="16O-yG-uAV"/>
+                <outlet property="countLabel" destination="FEa-bt-HIO" id="4py-0E-Orl"/>
+                <outlet property="iconImageView" destination="Nby-yY-cey" id="3VJ-7R-6uS"/>
+                <outlet property="titleLabel" destination="nZX-ce-FnV" id="NyC-9H-bIN"/>
+            </connections>
+            <point key="canvasLocation" x="-1133.3333333333335" y="7.03125"/>
+        </tableViewCell>
+    </objects>
+</document>
