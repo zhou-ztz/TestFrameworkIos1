@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 import SDWebImage
 import Alamofire
+import NEMeetingKit
 
 
 public class EatView: UIView {
