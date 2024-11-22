@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TestFrameworkIos1"
-  spec.version      = "1.0.4"
+  spec.version      = "1.0.5"
   spec.summary       = "这个是一个测试的demo description of Test-framework"
   spec.description  = <<-DESC
                    这个是一个测试的demo description of TestFrameworkIos1
@@ -10,12 +10,13 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.author       = { "tingzhi.zhou" => "tingzhi.zhou@yiartkeji.com" }
   spec.platform     = :ios, "15.0"
-  spec.source       = { :git => 'https://github.com/zhou-ztz/TestFrameworkIos1.git', :tag => '1.0.4'}
-  #spec.vendored_frameworks = "TestFrameworkIos1.framework"
+  spec.source       = { :git => 'https://github.com/zhou-ztz/TestFrameworkIos1.git', :tag => '1.0.5'}
+  spec.vendored_frameworks = ['TestFrameworkIos1/OBS.framework', 'TestFrameworkIos1/TZImagePickerController.xcframework']
   spec.source_files  = "TestFrameworkIos1/**/*.swift"
-   #s.source_files = 'Source/**/*.swift'
+  spec.resources = 'TestFrameworkIos1/Resources/**/*'
   spec.requires_arc  = true
   spec.static_framework = true
+  spec.swift_version    = '5.0'
 
   spec.dependency "SDWebImage", "5.17.0"
   #spec.dependency "SnapKit"
@@ -70,7 +71,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'TYAttributedLabel'
   spec.dependency 'Masonry', '1.1.0'   
   spec.dependency 'SCRecorder'
-  spec.dependency 'TZImagePickerController'
+  #spec.dependency 'TZImagePickerController'
 
   spec.dependency 'ObjectMapper', '3.4.2'
   spec.dependency 'ActiveLabel'

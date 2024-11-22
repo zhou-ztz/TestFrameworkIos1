@@ -1461,6 +1461,7 @@
 		8A9F0CD42CEF2E100021462C /* NTESSessionSearchListMoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F07382CEF2E0A0021462C /* NTESSessionSearchListMoreVC.swift */; };
 		8A9F0CD52CEF2E100021462C /* ReplyChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9F07392CEF2E0A0021462C /* ReplyChatView.swift */; };
 		8A9F0CD62CEF2E100021462C /* ReplyChatView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A9F073A2CEF2E0A0021462C /* ReplyChatView.xib */; };
+		8A9F0CDA2CF0243B0021462C /* TZImagePickerController.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A9F0CD92CF0243B0021462C /* TZImagePickerController.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -2913,6 +2914,7 @@
 		8A9F07382CEF2E0A0021462C /* NTESSessionSearchListMoreVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NTESSessionSearchListMoreVC.swift; sourceTree = "<group>"; };
 		8A9F07392CEF2E0A0021462C /* ReplyChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplyChatView.swift; sourceTree = "<group>"; };
 		8A9F073A2CEF2E0A0021462C /* ReplyChatView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReplyChatView.xib; sourceTree = "<group>"; };
+		8A9F0CD92CF0243B0021462C /* TZImagePickerController.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TZImagePickerController.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2921,6 +2923,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A9F09142CEF2E0D0021462C /* OBS.framework in Frameworks */,
+				8A9F0CDA2CF0243B0021462C /* TZImagePickerController.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2946,6 +2949,7 @@
 		8A77C0382CE5DEDD00F0B44B /* TestFrameworkIos1 */ = {
 			isa = PBXGroup;
 			children = (
+				8A9F0CD92CF0243B0021462C /* TZImagePickerController.xcframework */,
 				8A9F04522CEF2E040021462C /* AliVideoCert-com_togl_rewardslink_stg.crt */,
 				8A9F006C2CEF2DFA0021462C /* AppDependency.swift */,
 				8A9F073B2CEF2E0A0021462C /* Chat */,
