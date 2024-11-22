@@ -8,9 +8,21 @@
 		<data>
 		GgAfh7MeSYsQJV4t0Qb9o/4xKqs=
 		</data>
+		<key>Headers/LZImageBrowser.h</key>
+		<data>
+		UhovtnOYRsXCIRj99+At/oDEHlA=
+		</data>
+		<key>Headers/LZImageCropping.h</key>
+		<data>
+		igvmzn6vy6OWjPCum+U09D6Z6uk=
+		</data>
 		<key>Headers/NSBundle+TZImagePicker.h</key>
 		<data>
 		AAH7TSEYsdd9ddt+ktRxxSBdkQ8=
+		</data>
+		<key>Headers/TSLocalVideoCoverSelectedVC.h</key>
+		<data>
+		lAbWypTmX9/jxjq1rw5U+pBfeuw=
 		</data>
 		<key>Headers/TZAssetCell.h</key>
 		<data>
@@ -24,6 +36,10 @@
 		<data>
 		0T+H/QF4GYlEZZyDOwfWIg+YiXA=
 		</data>
+		<key>Headers/TZImageCropManager.h</key>
+		<data>
+		Yti9Nhk9g60RZlAM/Bj3cV0xwLk=
+		</data>
 		<key>Headers/TZImageManager.h</key>
 		<data>
 		P7xnrPk0CXutHazap3LmuNXNvjY=
@@ -32,9 +48,17 @@
 		<data>
 		P5xwzwu+A6RolTjcrBI+WxKXtBA=
 		</data>
+		<key>Headers/TZImageRequestOperation.h</key>
+		<data>
+		+1A0Gmyyk1k7o2t+D6vH/nv7Lck=
+		</data>
 		<key>Headers/TZLocationManager.h</key>
 		<data>
 		j/0c81gVP0qLyAvNTsafx9QZuwU=
+		</data>
+		<key>Headers/TZPhotoPickerController.h</key>
+		<data>
+		LCO6x6C8zn+Fh3yOvEsly36/oKA=
 		</data>
 		<key>Headers/TZPhotoPreviewCell.h</key>
 		<data>
@@ -44,9 +68,17 @@
 		<data>
 		tQm9AH1UcsltELAgE8kJlQ2PBg8=
 		</data>
+		<key>Headers/TZProgressView.h</key>
+		<data>
+		Itl4CgW2AS5a9RqYkOwj1Pjli5I=
+		</data>
 		<key>Headers/TZVideoPlayerController.h</key>
 		<data>
 		f26j8AOcwxR+Bil+AymyK8PRVZw=
+		</data>
+		<key>Headers/ZLEditVideoController.h</key>
+		<data>
+		4ygpeSwKP5uOnlgzAp7ERwoN1uA=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -459,6 +491,28 @@
 			WL6+O0kg/dB5JftsDCGjgHMTIz+0mo9TrytBpIyA/HY=
 			</data>
 		</dict>
+		<key>Headers/LZImageBrowser.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			UhovtnOYRsXCIRj99+At/oDEHlA=
+			</data>
+			<key>hash2</key>
+			<data>
+			QsC5xzPDcene2GothEw1pEEdSf0teuTIwGkeq084WYw=
+			</data>
+		</dict>
+		<key>Headers/LZImageCropping.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			igvmzn6vy6OWjPCum+U09D6Z6uk=
+			</data>
+			<key>hash2</key>
+			<data>
+			FMyGTVHaRvKaKZWBO/dKt8vcRlijoAz8zdJN7Bl6miA=
+			</data>
+		</dict>
 		<key>Headers/NSBundle+TZImagePicker.h</key>
 		<dict>
 			<key>hash</key>
@@ -468,6 +522,17 @@
 			<key>hash2</key>
 			<data>
 			1nJumanQ1OKFan2Kl1Pb6lgLhtm5DJroZxcVFUmag1w=
+			</data>
+		</dict>
+		<key>Headers/TSLocalVideoCoverSelectedVC.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			lAbWypTmX9/jxjq1rw5U+pBfeuw=
+			</data>
+			<key>hash2</key>
+			<data>
+			x2uTN+CII/7TycNTLtI8cB2Gv/GnUIwq+kxBG+5NT/c=
 			</data>
 		</dict>
 		<key>Headers/TZAssetCell.h</key>
@@ -503,6 +568,17 @@
 			2h07PDk6Nks+ROjRGHdXNHyU+lU55qB4j7ChVysfFRY=
 			</data>
 		</dict>
+		<key>Headers/TZImageCropManager.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Yti9Nhk9g60RZlAM/Bj3cV0xwLk=
+			</data>
+			<key>hash2</key>
+			<data>
+			G567Vb3RUQ11LFN/ZhT7LI16+wBBPySlDZdADuxu9Qo=
+			</data>
+		</dict>
 		<key>Headers/TZImageManager.h</key>
 		<dict>
 			<key>hash</key>
@@ -525,6 +601,17 @@
 			zUKxdu90RFq4Nht3Ch75mwF/RtYWWzgv4wpNTstz+cw=
 			</data>
 		</dict>
+		<key>Headers/TZImageRequestOperation.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			+1A0Gmyyk1k7o2t+D6vH/nv7Lck=
+			</data>
+			<key>hash2</key>
+			<data>
+			yDEqthSzSQkvN0FjXDDHcJEtS+yJFxDU5xwygMUPLZo=
+			</data>
+		</dict>
 		<key>Headers/TZLocationManager.h</key>
 		<dict>
 			<key>hash</key>
@@ -534,6 +621,17 @@
 			<key>hash2</key>
 			<data>
 			LjRZC8V2nL6veuKVJtiHd0k5QAIF3CpTF+ZssFjwG0I=
+			</data>
+		</dict>
+		<key>Headers/TZPhotoPickerController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LCO6x6C8zn+Fh3yOvEsly36/oKA=
+			</data>
+			<key>hash2</key>
+			<data>
+			bbFnTZUSRDIX96dKzYkdroKzBSkdCLGgDoyPnxx4AaU=
 			</data>
 		</dict>
 		<key>Headers/TZPhotoPreviewCell.h</key>
@@ -558,6 +656,17 @@
 			T1kneZ70pcKy3l5oAohW1phLzklliCNWlUrQkWzvM5M=
 			</data>
 		</dict>
+		<key>Headers/TZProgressView.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Itl4CgW2AS5a9RqYkOwj1Pjli5I=
+			</data>
+			<key>hash2</key>
+			<data>
+			TVVsd2UmBLwr3zqoKPla6Cpx3/Zo3XffDOrQCg4YL54=
+			</data>
+		</dict>
 		<key>Headers/TZVideoPlayerController.h</key>
 		<dict>
 			<key>hash</key>
@@ -567,6 +676,17 @@
 			<key>hash2</key>
 			<data>
 			XY/of+6Pi9AdmrzNPULBPAPNAEGKruP3uqsirt5MffU=
+			</data>
+		</dict>
+		<key>Headers/ZLEditVideoController.h</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			4ygpeSwKP5uOnlgzAp7ERwoN1uA=
+			</data>
+			<key>hash2</key>
+			<data>
+			JXiV7cmPUg/6dGoCACs9956bAoxpWNHgWTBNAYC6hkE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

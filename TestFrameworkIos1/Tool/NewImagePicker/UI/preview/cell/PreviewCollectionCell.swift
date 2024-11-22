@@ -9,6 +9,7 @@
 import UIKit
 import  Photos
 import MobileCoreServices
+import TZImagePickerController
 
 class PreviewCollectionCell: UICollectionViewCell, UIScrollViewDelegate {
 

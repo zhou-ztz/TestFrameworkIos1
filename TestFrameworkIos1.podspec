@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = "TestFrameworkIos1"
-  spec.version      = "1.0.5"
+  spec.version      = "1.0.6"
   spec.summary       = "这个是一个测试的demo description of Test-framework"
   spec.description  = <<-DESC
                    这个是一个测试的demo description of TestFrameworkIos1
@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.license      = { :type => 'MIT', :file => 'LICENSE' }
   spec.author       = { "tingzhi.zhou" => "tingzhi.zhou@yiartkeji.com" }
   spec.platform     = :ios, "15.0"
-  spec.source       = { :git => 'https://github.com/zhou-ztz/TestFrameworkIos1.git', :tag => '1.0.5'}
+  spec.source       = { :git => 'https://github.com/zhou-ztz/TestFrameworkIos1.git', :tag => '1.0.6'}
   spec.vendored_frameworks = ['TestFrameworkIos1/OBS.framework', 'TestFrameworkIos1/TZImagePickerController.xcframework']
   spec.source_files  = "TestFrameworkIos1/**/*.swift"
   spec.resources = 'TestFrameworkIos1/Resources/**/*'
@@ -90,7 +90,7 @@ Pod::Spec.new do |spec|
   spec.dependency 'libksygpulive/KSYGPUResource'
   spec.dependency 'libksygpulive/libksygpulive' 
   spec.dependency 'PLMediaStreamingKit', '3.0.6'
-  spec.dependency 'PusherSwift'
+  spec.dependency 'PusherSwift', '~> 9.0'
   spec.dependency 'InputBarAccessoryView'
 
   spec.dependency 'AlipaySDK-iOS', '~> 15.7.9'

@@ -277,7 +277,7 @@ class IMChatViewController: ChatViewController {
     }()
     
     /// The object that manages autocomplete
-    open lazy var autocompleteManager: AutocompleteManager = { [unowned self] in
+    lazy var autocompleteManager: AutocompleteManager = { [unowned self] in
         let manager = AutocompleteManager(for: self.inputBar.inputTextView)
         manager.delegate = self
         manager.dataSource = self

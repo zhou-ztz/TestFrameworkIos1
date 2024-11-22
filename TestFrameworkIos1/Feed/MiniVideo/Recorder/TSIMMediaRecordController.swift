@@ -428,7 +428,7 @@ extension TSIMMediaRecordController: TZImagePickerControllerDelegate {
             if let asset = avasset as? AVURLAsset {
                 let duration = asset.duration
                 let seconds = CMTimeGetSeconds(duration)
-                let path = HTSVideoData.cacheDirPath().appending("/\(UUID().uuidString)").appending(".\(asset.url.pathExtension)")
+                let path = self.customCacheDirPath().appending("/\(UUID().uuidString)").appending(".\(asset.url.pathExtension)")
                 let toUrl = URL(fileURLWithPath: path)
                 do {
                     try FileManager.default.copyItem(at: asset.url, to: toUrl)
@@ -445,6 +445,13 @@ extension TSIMMediaRecordController: TZImagePickerControllerDelegate {
                 
             }
         }
+    }
+    
+    private func customCacheDirPath() -> String {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        let cachePath = documentsDirectory.appendingPathComponent("VideoDataCache").path
+        return cachePath
     }
     
     private func getVideoRequestOptions() -> PHVideoRequestOptions {
